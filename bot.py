@@ -253,6 +253,7 @@ async def on_message(message):
                     await message.channel.send('Use `$scrape <league>` to scrape the lines for a given league.')
                 elif args[0].lower() == 'nba':
                     upload_nba_game_lines()
+                    await message.channel.send(f'Updated lines and odds for {args[0].upper()} games!')
                 else: 
                     await message.channel.send('Please use `$scrape help` to see all commands.')
             else:
@@ -267,6 +268,7 @@ async def on_message(message):
                     await message.channel.send('Please use `$update help` to see all commands.')
             else:
                 process_bets()
+                await message.channel.send(f'Processed bets and updated balances!')
 
 
         if command == '$hello':

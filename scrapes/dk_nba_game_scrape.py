@@ -3,25 +3,27 @@ import requests
 
 from bs4 import BeautifulSoup
 
-# TODO: remove this block into separate file
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from utils.sheets_utils import upload_df
+
+# # TODO: remove this block into separate file
+# import gspread
+# from oauth2client.service_account import ServiceAccountCredentials
 
 from constants import JSON_KEYFILE, NBA_GAME_URL, SCOPE, SHEET_NAMES
 
-credentials = ServiceAccountCredentials.from_json_keyfile_dict(JSON_KEYFILE, SCOPE)
-client = gspread.authorize(credentials)
+# credentials = ServiceAccountCredentials.from_json_keyfile_dict(JSON_KEYFILE, SCOPE)
+# client = gspread.authorize(credentials)
 
-spreadsheet = client.open('Sports Betting Bot')
+# spreadsheet = client.open('Sports Betting Bot')
 
 
-def upload_df(df, sheet_name):
-    sheet_name = sheet_name.upper()
+# def upload_df(df, sheet_name):
+#     sheet_name = sheet_name.upper()
 
-    if sheet_name in SHEET_NAMES:
-        spreadsheet.worksheet(sheet_name).clear()
-        spreadsheet.worksheet(sheet_name).update([df.columns.values.tolist()] + df.values.tolist())
-##################################
+#     if sheet_name in SHEET_NAMES:
+#         spreadsheet.worksheet(sheet_name).clear()
+#         spreadsheet.worksheet(sheet_name).update([df.columns.values.tolist()] + df.values.tolist())
+# ##################################
 
 
 def convert_nba_name(team):
