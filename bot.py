@@ -1,4 +1,5 @@
 import discord
+import os
 
 from bets import process_bets
 
@@ -34,7 +35,7 @@ async def on_message(message):
 
     author = message.author
 
-    if message.channel.name == 'test-bot':
+    if message.channel.name == 'place-bets':
         command, args = parse_input(message.content)
 
         # sports betting bot help
@@ -277,4 +278,4 @@ async def on_message(message):
             await message.channel.send(f'gn {author.mention}!')
     
 
-client.run('OTEzNTMwMDkyMjYzNzIzMDM4.YZ_1Mg.beB-pKJ2McsxClM4orXRbscA344')
+client.run(os.getenv('TOKEN'))
