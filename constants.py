@@ -4,9 +4,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# SPORTS_BETTING_GENERAL_ID = 913510229419909150
-# GM_GN_ID = 911472276145307698
-
 ## GOOGLE SHEETS API
 JSON_KEYFILE = {
     "type": "service_account",

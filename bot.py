@@ -6,7 +6,6 @@ from bets import process_bets
 from dotenv import load_dotenv
 
 from scrapes.dk_nba_game_scrape import upload_nba_game_lines
-
 from utils.general import create_leaderboard_embed, create_spread_bet, create_ml_bet, create_ou_bet, create_bet_embed, parse_input
 from utils.nba_utils import create_nba_game_line_embed
 from utils.sheets_utils import download_df, upload_df

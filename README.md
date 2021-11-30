@@ -1,1 +1,1 @@
-# sports-betting-bot
+# Discord Sports Betting Bot

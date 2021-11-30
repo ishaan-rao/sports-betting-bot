@@ -1,7 +1,6 @@
 import pandas as pd
 
 from scrapes.nba_game_bets import get_games_by_date
-
 from utils.sheets_utils import download_df, upload_df
 
 def find_result(results, team):

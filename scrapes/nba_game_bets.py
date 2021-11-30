@@ -1,6 +1,7 @@
-import pandas as pd
-from nba_api.stats.endpoints import leaguegamefinder
 import datetime
+import pandas as pd
+
+from nba_api.stats.endpoints import leaguegamefinder
 
 # get_games_by_date() - 
 # Function for getting NBA games and results on a certain date
